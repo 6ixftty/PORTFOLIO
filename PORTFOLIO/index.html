@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Hi there</title>
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="nav-wrapper">
+				<div class="left-side">
+					<div class="nav-link-wrapper active-nav-link">
+						<a href="index.html">Home</a>
+					</div>
+					<div class="nav-link-wrapper">
+						<a href="about.html">About</a>
+					</div>
+				</div>
+				<div class="right-side">
+					<div class="brand">
+						<div>OLUBUNMI AYOMIDE</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="content-wrapper">
+				<div class="portfolio-items-wrapper">
+					<div class="portfolio-item-wrapper">
+						<div
+							class="portfolio-img-background"
+							style="background-image: url(Images/demonslayer.jpg)"
+						></div>
+						<div class="img-text-wrapper">
+							<div class="subtitle">
+								"Look straight ahead. Rouse yourself! Give it all you've got
+								Tanjiro! Give it all you've got!"
+							</div>
+						</div>
+					</div>
+					<div class="portfolio-item-wrapper">
+						<div
+							class="portfolio-img-background"
+							style="background-image: url(Images/revenant.jpg)"
+						></div>
+						<div class="img-text-wrapper">
+							<div class="subtitle">"I am the Nightmare"</div>
+						</div>
+					</div>
+					<div class="portfolio-item-wrapper">
+						<div
+							class="portfolio-img-background"
+							style="background-image: url(Images/wehappyfew.jpg)"
+						></div>
+						<div class="img-text-wrapper">
+							<div class="subtitle">"We Happy Few!"</div>
+						</div>
+					</div>
+					<div class="portfolio-item-wrapper">
+						<div
+							class="portfolio-img-background"
+							style="background-image: url(Images/jumpforce.jpg)"
+						></div>
+						<div class="img-text-wrapper">
+							<div class="subtitle">"Play Jumpforce with Xbox Live"</div>
+						</div>
+					</div>
+					<div class="portfolio-item-wrapper">
+						<div
+							class="portfolio-img-background"
+							style="background-image: url(Images/diallo.JPG)"
+						></div>
+						<div class="img-text-wrapper">
+							<div class="subtitle">"Man like diallo"</div>
+						</div>
+					</div>
+					<div class="portfolio-item-wrapper">
+						<div
+							class="portfolio-img-background"
+							style="background-image: url(Images/IMG_0164.JPG)"
+						></div>
+						<div class="img-text-wrapper">
+							<div class="subtitle">"EasyMoneySniper, Uncle Drew, "</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		const portfolioitems = document.querySelectorAll(".portfolio-item-wrapper");
+
+		portfolioitems.forEach((portfolioitem) => {
+			portfolioitem.addEventListener("mouseover", () => {
+				console.log(portfolioitem.childNodes[1].classList);
+				portfolioitem.childNodes[1].classList.add("img-darken");
+			});
+			portfolioitem.addEventListener("mouseout", () => {
+				portfolioitem.childNodes[1].classList.remove("img-darken");
+			});
+		});
+	</script>
+</html>
